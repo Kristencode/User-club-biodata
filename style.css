@@ -60,5 +60,6 @@ button{
 
 p{
     font-size: 30px;
-    color: azure;
+    color: rgb(14, 241, 14);
+    font-weight: 900;
 }
