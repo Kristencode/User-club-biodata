@@ -11,7 +11,7 @@ document.getElementById('submitBtn').addEventListener('click', function() {
     }
 
 
-    document.getElementById('Heading').textContent = `Thank you for choosing Screen247 ${name}. Best of luck to  your ${club} `;
+    document.getElementById('Heading').textContent = `Thank you for choosing Screen247 ${name}. Best of luck to  your  club, ${club} `;
 
     document.getElementById('formContainer').style.display = 'none';
 
