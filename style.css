@@ -1,65 +1,60 @@
-
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url(https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) ;
-    background-size: cover;
-    background-position: center ;
-    background-repeat: no-repeat;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#Heading{
-    font-size: 50px;
-    color: greenyellow;
+#Heading {
+  font-size: 50px;
+  color: greenyellow;
 }
 
-
-form{
-    height: 500px;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: -3px -5px 173px 0px rgba(9,107,9,0.75);
--webkit-box-shadow: -3px -5px 173px 0px rgba(9,107,9,0.75);
--moz-box-shadow: -3px -5px 173px 0px rgba(9,107,9,0.75);
+form {
+  height: 700px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: -3px -5px 173px 0px rgba(9, 107, 9, 0.75);
+  -webkit-box-shadow: -3px -5px 173px 0px rgba(9, 107, 9, 0.75);
+  -moz-box-shadow: -3px -5px 173px 0px rgba(9, 107, 9, 0.75);
 }
 
-
-label{
-    color:greenyellow;
-    font-size: large;
+label {
+  color: greenyellow;
+  font-size: large;
 }
 
-
-input{
-    width: 300px;
-    height: 30px;
-    border: none;
-    border-style: none;
-    
+input {
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-style: none;
 }
 
-div{
-    margin-top: 10px;
-}
- 
-button{
-    width: 100px;
-    height: 30px;
-    margin-top: 10px;
-    background-color: rgb(4, 65, 44);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: larger;
+div {
+  margin-top: 10px;
 }
 
-p{
-    font-size: 30px;
-    color: rgb(14, 241, 14);
-    font-weight: 900;
+button {
+  width: 100px;
+  height: 30px;
+  margin-top: 10px;
+  background-color: rgb(4, 65, 44);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: larger;
+}
+
+p {
+  font-size: 30px;
+  color: rgb(14, 241, 14);
+  font-weight: 900;
 }

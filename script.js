@@ -1,33 +1,66 @@
-// l
-document.getElementById('submitBtn').addEventListener('click', function() {
-    const name = document.getElementById('nameInput').value;
-    const age = document.getElementById('ageInput').value;
-    const email= document.getElementById('emailInput').value;
-    const club = document.getElementById('clubInput').value;
-   
-    if (age < 18) {
-        alert("You must be at least 18 years old.");
-        return;
+document
+  .getElementById("submitBtn")
+  .addEventListener("click", function (event) {
+    const name = document.getElementById("nameInput").value;
+    const age = document.getElementById("ageInput").value;
+    const email = document.getElementById("emailInput").value;
+    const club = document.getElementById("clubInput").value;
+    let error = document.getElementById("name");
+    let ageError = document.getElementById("Age");
+    let emailError = document.getElementById("email");
+    let clubError = document.getElementById("club");
+
+    let hasError = false;
+
+    if (!name) {
+      error.innerText = "Input your name!";
+      error.style.color = "red";
+      error.style.fontSize = "14px";
+      hasError = true;
     }
 
+    if (!age || age < 18) {
+      ageError.innerText = "Please fill field or must be .18!";
+      ageError.style.color = "red";
+      ageError.style.fontSize = "14px";
+      hasError = true;
+    }
 
-    document.getElementById('Heading').textContent = `Thank you for choosing Screen247 ${name}. Best of luck to  your  club, ${club} `;
+    if (!email) {
+      emailError.innerText = "Please fill field!";
+      emailError.style.color = "red";
+      emailError.style.fontSize = "14px";
+      hasError = true;
+    }
 
-    document.getElementById('formContainer').style.display = 'none';
+    if (!club) {
+      clubError.innerText = "Please fill field!";
+      clubError.style.color = "red";
+      clubError.style.fontSize = "14px";
+      hasError = true;
+    }
 
-    const heading = document.getElementById('Heading');
-    heading.style.display = 'block';
-    heading.style.color = 'white';
-    heading.style.textAlign = 'center'; 
-    heading.style.fontSize = '5em'; 
+    if (hasError) {
+      event.preventDefault();
+      return;
+    }
 
-    setTimeout(() => {
-        heading.style.display = 'none'; 
-    }, 1200000);
-    
-});
+    let storage = localStorage.getItem("email");
+    let regStatus = document.getElementById("status");
+    if (storage === email) {
+      regStatus.innerText = "Email already exists! Use  different email.";
+      regStatus.style.color = "red";
 
+      localStorage.setItem("name", name);
+      localStorage.setItem("email", email);
+      localStorage.setItem("age", age);
+      localStorage.setItem("club", club);
 
-
-
-
+      regStatus.innerText = "Registration successful1 please Login...";
+      regStatus.style.color = "red";
+      setTimeout(() => {
+        window.location.href = "login.html";
+      }, 2000);
+      return;
+    }
+  });
